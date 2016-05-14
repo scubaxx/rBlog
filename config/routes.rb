@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'contacts/new'
+  get 'contact' => 'contacts#new'
 
   get 'contacts/create'
 
-  get 'about/index'
+  get 'about' => 'about#index'
 
   namespace :admin do
   get 'sessions/new'
@@ -113,7 +113,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'posts#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -123,6 +123,15 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+
+  #Resources For the Front End
+  resources :posts, :categories, :comments
+  resources "contacts", only: [:new, :create]
+
+  #Resources for the Admin
+  namespace :admin do
+    resources :posts, :categories, :comments, :users
+  end 
 
   # Example resource route with options:
   #   resources :products do

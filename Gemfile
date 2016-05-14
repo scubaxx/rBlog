@@ -29,6 +29,7 @@ gem 'bcrypt', :require => "bcrypt"
 gem 'mail_form'
 gem 'simple_form'
 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -46,6 +47,10 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+
+group :development do
+	gem 'rails_real_favicon'
+end	
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
