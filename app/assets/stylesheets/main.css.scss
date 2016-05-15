@@ -1,13 +1,13 @@
 body{
 	font-family:'Arial', sans-serif;
-	background:#eee;
+	background:#background-color;
 	line-height:1.6em;
 }
 
 .navbar{
 	overflow:auto;
 	min-height:100px;
-	background:#36424a;
+	background:$primary-color;
 	color:#fff;
 	font-size:18px;
 	border:0;
@@ -37,7 +37,7 @@ body{
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
 	background:none;
-	color:#ff953f !important;
+	color:$secondary-color !important;
 }
 
 .search-form{
@@ -68,7 +68,7 @@ body{
 }
 
 .btn-primary{
-	background:#ff953f
+	background:$primary-btn-color;
 }
 
 .btn:hover{
@@ -96,7 +96,7 @@ body{
 }
 
 .post small{
-	background:#36424a;
+	background:$primary-color;
 	color:#fff;
 	display:block;
 	margin:10px 0;
@@ -104,7 +104,7 @@ body{
 }
 
 footer{
-	background:#36424a;
+	background:$primary-color;
 	color:#fff;
 	text-align: center;
 	height:60px;
