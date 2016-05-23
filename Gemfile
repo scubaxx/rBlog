@@ -28,6 +28,7 @@ gem 'autoprefixer-rails'
 gem 'bcrypt', :require => "bcrypt"
 gem 'mail_form'
 gem 'simple_form'
+gem 'will_paginate', '~> 3.0'
 
 
 # Use ActiveModel has_secure_password
