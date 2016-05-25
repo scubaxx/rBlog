@@ -13,4 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap-sprockets
+//= require froala_editor.min.js
+//= require plugins/quick_insert.min.js
+//= require plugins/char_counter.min.js
+//= require plugins/quote.min.js
+//= require plugins/save.min.js
+//= require plugins/paragraph_format.min.js
+//= require plugins/code_view.min.js
 //= require_tree .
