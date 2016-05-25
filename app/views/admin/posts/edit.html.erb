@@ -28,6 +28,10 @@
 		<%= f.label :image %>
 		<%= f.file_field :image %>
 	</div>
+	<% if @post.image.exists? %>
+		<%= image_tag @post.image.url,width:'100%' %>
+	<% end %>	
+	<br>	
 	
 	<div class="form-group">
 		<%= f.label :tags %>
@@ -37,8 +41,7 @@
 	<div class="form-group">
 		<%= f.label :body %>
 		<%= f.text_area :body ,class:'form-control' %>
-	</div>
-					
+	</div>			
 	<br>
 	<%= f.submit "Submit", class:'btn btn-primary' %>
 	<%= link_to "Cancel", admin_posts_path, class:'btn btn-default' %>
