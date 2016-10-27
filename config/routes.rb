@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
   get 'contact' => 'contacts#new'
-
   get 'contacts/create'
-
   get 'about' => 'about#index'
 
   namespace :admin do
-  get 'sessions/new'
+  get 'login' => "sessions#new", :as => "login"
   end
 
   namespace :admin do
@@ -113,7 +111,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'posts#index'
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -137,6 +135,9 @@ Rails.application.routes.draw do
     resources :comments
   end 
 
+
+  root 'posts#index'
+  
   # Example resource route with options:
   #   resources :products do
   #     member do

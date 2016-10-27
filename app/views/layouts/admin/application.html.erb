@@ -24,7 +24,7 @@ this is the back end
           <ul class="nav navbar-nav">
             <li class="<%= params[:controller] == 'admin/posts' ? 'active' : '' %>"><%= link_to "Posts", admin_posts_path %></li>
             <li class="<%= params[:controller] == 'admin/categories' ? 'active' : '' %>"><%= link_to "Categories", admin_categories_path %></li>
-            <li class="<%= params[:controller] == 'admin/posts' ? 'active' : '' %>"><%= link_to "Users", admin_users_path %></li>
+            <li class="<%= params[:controller] == 'admin/users' ? 'active' : '' %>"><%= link_to "Users", admin_users_path %></li>
           </ul>
           <%= render 'partials/admin/search' %>
         </div><!--/.nav-collapse -->
