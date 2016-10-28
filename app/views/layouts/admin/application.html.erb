@@ -18,7 +18,7 @@ this is the back end
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-         <a class="navbar-brand" href="index.html"><h1>rBlog<span>/Manager</span></h1></a>
+         <a class="navbar-brand" href="posts"><h1>rBlog<span>/Manager</span></h1></a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -36,6 +36,15 @@ this is the back end
         <div class="row">
           <div class="col-md-12">
           <div class="well">
+            <div id="user_nav" class="pull-right">
+              <% if current_user %>
+                Logged in as <%= current_user.email %>
+                <%= link_to "Log out", admin_logout_path %>
+                <% else %>
+                  <%= link_to "log in", admin_login_path %>
+                <% end %>
+            </div>
+            <div class="clearfix"></div>      
             <!-- Alerts & Notices -->
             <% if flash[:notice] %>
               <div class="alert alert-success"><%= flash[:notice] %></div>
